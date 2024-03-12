@@ -9,4 +9,6 @@ This is a simple echo client and server that communicate over a TLS channel. To 
 
 `openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout cert.pem`
 
-openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=AB/L=YYC/O=UofC/OU=CPSC/CN=localhost"
+executing the command this way will activate an interactive prompt where you are asked some questions about the subject of the certificate. You can also provide the answers as part of the command like in the example below
+
+`openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=AB/L=YYC/O=UofC/OU=CPSC/CN=localhost"`
